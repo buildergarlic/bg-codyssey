@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "attendance-ai"
+version = "1.0.0"
+description = "출근/퇴근 메뉴 오선택을 자동으로 바로잡아 실제 지문 시각 기준으로 근로시간을 계산하는 AI 근태 판정기"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+xlsx = ["openpyxl>=3.0"]
+
+[project.scripts]
+attendance-ai = "attendance_ai.cli:main"
+
+[tool.setuptools]
+packages = ["attendance_ai"]
